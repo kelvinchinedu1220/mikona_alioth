@@ -207,6 +207,15 @@ SHRP_FONP_2 := sys/devices/platform/flashlights_ocp8132/torch_brightness
 SHRP_STATUSBAR_RIGHT_PADDING := 40
 SHRP_STATUSBAR_LEFT_PADDING := 40
 
+#SHRP Addons
+SHRP_SKIP_DEFAULT_ADDON_1 := true
+SHRP_EXTERNAL_ADDON_PATH := $(DEVICE_PATH)/addons/
+SHRP_EXTERNAL_ADDON_1_NAME := 'Mount Super as RW'
+SHRP_EXTERNAL_ADDON_1_INFO := 'This will mount your system partitions as RW'
+SHRP_EXTERNAL_ADDON_1_FILENAME := mountrw.zip
+SHRP_EXTERNAL_ADDON_1_BTN_TEXT := Mount
+SHRP_EXTERNAL_ADDON_1_SUCCESSFUL_TEXT := Mounted
+
 # enable python
 TW_INCLUDE_PYTHON := true
 
