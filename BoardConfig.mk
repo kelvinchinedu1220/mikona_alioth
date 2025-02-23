@@ -184,7 +184,7 @@ TW_EXCLUDE_APEX := true
 TW_SUPPORT_INPUT_AIDL_HAPTICS := true
 
 # Skyhawk Specific Flags
-SHRP_PATH := device/xiaomi/gauguin
+SHRP_PATH := device/xiaomi/alioth
 SHRP_MAINTAINER := Kelvinchinedu
 SHRP_DEVICE_CODE := alioth
 SHRP_REC_TYPE := Treble
