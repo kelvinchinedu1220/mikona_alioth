@@ -184,6 +184,7 @@ TW_EXCLUDE_APEX := true
 TW_SUPPORT_INPUT_AIDL_HAPTICS := true
 
 # Skyhawk Specific Flags
+SHRP_OFFICIAL := true
 SHRP_PATH := device/xiaomi/alioth
 SHRP_MAINTAINER := Kelvinchinedu
 SHRP_DEVICE_CODE := alioth
@@ -203,6 +204,8 @@ SHRP_EDL_MODE := 1
 SHRP_CUSTOM_FLASHLIGHT := true
 SHRP_FONP_1 := sys/devices/platform/flashlights_ocp8132/torch_brightness
 SHRP_FONP_2 := sys/devices/platform/flashlights_ocp8132/torch_brightness
+SHRP_STATUSBAR_RIGHT_PADDING := 40
+SHRP_STATUSBAR_LEFT_PADDING := 40
 
 # enable python
 TW_INCLUDE_PYTHON := true
