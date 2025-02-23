@@ -183,6 +183,27 @@ TW_NO_SCREEN_BLANK := true
 TW_EXCLUDE_APEX := true
 TW_SUPPORT_INPUT_AIDL_HAPTICS := true
 
+# Skyhawk Specific Flags
+SHRP_PATH := device/xiaomi/gauguin
+SHRP_MAINTAINER := Kelvinchinedu
+SHRP_DEVICE_CODE := alioth
+SHRP_REC_TYPE := Treble
+SHRP_DEVICE_TYPE := A/B
+SHRP_NOTCH := true
+SHRP_EDL_MODE := 1
+SHRP_EXTERNAL := /external_sd
+SHRP_INTERNAL := /sdcard
+SHRP_OTG := /usb_otg
+SHRP_FLASH := 1
+SHRP_DARK := true
+SHRP_FLASHLIGHT_PATH := sys/devices/platform/flashlights_ocp8132/torch_brightness
+SHRP_REC := /dev/block/bootdevice/by-name/boot
+SHRP_DEVICE_CODE := alioth
+SHRP_EDL_MODE := 1
+SHRP_CUSTOM_FLASHLIGHT := true
+SHRP_FONP_1 := sys/devices/platform/flashlights_ocp8132/torch_brightness
+SHRP_FONP_2 := sys/devices/platform/flashlights_ocp8132/torch_brightness
+
 # enable python
 TW_INCLUDE_PYTHON := true
 
