@@ -182,6 +182,7 @@ TARGET_USES_MKE2FS := true
 TW_NO_SCREEN_BLANK := true
 TW_EXCLUDE_APEX := true
 TW_SUPPORT_INPUT_AIDL_HAPTICS := true
+TW_THEME := OrangeFox
 
 # enable python
 TW_INCLUDE_PYTHON := true
