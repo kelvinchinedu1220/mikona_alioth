@@ -36,16 +36,18 @@ fi
 if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export FOX_VARIANT="A12"
 	export OF_USE_GREEN_LED=0
-        export FOX_ENABLE_APP_MANAGER=1
-        export OF_IGNORE_LOGICAL_MOUNT_ERRORS=1
+    export FOX_ENABLE_APP_MANAGER=1
+    export OF_IGNORE_LOGICAL_MOUNT_ERRORS=1
    	export TW_DEFAULT_LANGUAGE="en"
 	export LC_ALL="C"
  	export ALLOW_MISSING_DEPENDENCIES=true
 	export TARGET_DEVICE_ALT="aliothin"
+	export FOX_CLASSIC_LEDS_FUNCTION=1
 	export OF_TARGET_DEVICES="aliothin,alioth"
 	export OF_VIRTUAL_AB_DEVICE=1
 	export FOX_RECOVERY_SYSTEM_PARTITION="/dev/block/mapper/system"
 	export FOX_RECOVERY_VENDOR_PARTITION="/dev/block/mapper/vendor"
+	export FOX_USE_LOCKSCREEN_BUTTON=1
 	export OF_USE_MAGISKBOOT_FOR_ALL_PATCHES=1
 	export OF_DONT_PATCH_ENCRYPTED_DEVICE=1
 	export OF_NO_TREBLE_COMPATIBILITY_CHECK=1
@@ -55,11 +57,11 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export FOX_USE_SED_BINARY=1
 	export FOX_USE_XZ_UTILS=1
 	export OF_ENABLE_LPTOOLS=1
-	export FOX_USE_NANO_EDITOR=1
-        export OF_QUICK_BACKUP_LIST="/boot;/data;"
-        export FOX_DELETE_AROMAFM=1
-        export FOX_BUGGED_AOSP_ARB_WORKAROUND="1616300800"; # Sun 21 Mar 04:26:40 GMT 2021
-
+	export FOX_USE_NANO_EDITOR=1     export FOX_INSTALLER_DEBUG_MODE=1
+	export OF_QUICK_BACKUP_LIST="/boot;/data;"
+    export FOX_DELETE_AROMAFM=1
+    export FOX_BUGGED_AOSP_ARB_WORKAROUND="1616300800"; # Sun 21 Mar 04:26:40 GMT 2021
+    export FOX_VERSION="R11.2_0"
 	# the magisk addon
 	export FOX_USE_SPECIFIC_MAGISK_ZIP=~/Magisk/Magisk-v28.1.zip
 
@@ -68,7 +70,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export OF_STATUS_H=100
 	export OF_STATUS_INDENT_LEFT=48
 	export OF_STATUS_INDENT_RIGHT=48
-  	export OF_HIDE_NOTCH=1
+  	export OF_HIDE_NOTCH=0
 	export OF_CLOCK_POS=1
 
 	# maximum permissible splash image size (in kilobytes)
