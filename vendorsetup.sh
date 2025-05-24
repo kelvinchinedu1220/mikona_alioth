@@ -34,7 +34,7 @@ if [ -z "$1" -a -z "$FOX_BUILD_DEVICE" ]; then
 fi
 
 if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
-	export FOX_VARIANT="A12"
+	export FOX_VARIANT="A13"
 	export OF_USE_GREEN_LED=0
     export FOX_ENABLE_APP_MANAGER=1
     export OF_IGNORE_LOGICAL_MOUNT_ERRORS=1
@@ -61,10 +61,10 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export OF_QUICK_BACKUP_LIST="/boot;/data;"
     export FOX_DELETE_AROMAFM=1
     export FOX_BUGGED_AOSP_ARB_WORKAROUND="1616300800"; # Sun 21 Mar 04:26:40 GMT 2021
-    export FOX_VERSION="R11.2_0"
+    export FOX_VERSION="R11.3_1"
 	
 	# the magisk addon
-	export FOX_USE_SPECIFIC_MAGISK_ZIP=~/Magisk/Magisk-v28.1.zip
+	export FOX_USE_SPECIFIC_MAGISK_ZIP=~/Magisk/Magisk-v29.0.zip
 
 	# screen settings
 	export OF_SCREEN_H=2400
@@ -86,7 +86,11 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	# no special MIUI stuff
         export OF_VANILLA_BUILD=1
 	export OF_NO_MIUI_PATCH_WARNING=1
-
+    
+	# flashligh
+   	export OF_FLASHLIGHT_ENABLE=1
+	   	export OF_FL_PATH="/sys/class/leds/led_torch_1"
+		   	
 	# full size
 	export OF_DYNAMIC_FULL_SIZE=9126805504
 
