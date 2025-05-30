@@ -167,8 +167,10 @@ TARGET_RECOVERY_QCOM_RTC_FIX := true
 TW_EXCLUDE_DEFAULT_USB_INIT := true
 TW_EXTRA_LANGUAGES := true
 TW_DEFAULT_LANGUAGE := en
-TW_DEVICE_VERSION := A15_Nino_Alioth
+TW_DEVICE_VERSION := POCO_F3_BY NINO
+TW_MTP_DEVICE := POCO_F3
 TW_INCLUDE_NTFS_3G := true
+TWRP_NEW_THEME := false
 TW_USE_TOOLBOX := true
 TW_INCLUDE_REPACKTOOLS := true
 TW_INCLUDE_RESETPROP := true
@@ -186,6 +188,23 @@ TW_CUSTOM_POWER_BUTTON := 107
 TWTW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
 TW_FORCE_CPUINFO_FOR_DEVICE_ID := true
 TW_SECONDARY_BRIGHTNESS_PATH := "/sys/devices/platform/soc/ae00000.qcom,mdss_mdp/backlight/panel0-backlight"
+TW_HAS_DOWNLOAD_MODE := true
+TW_HAS_EDL_MODE := true
+TW_HAS_FASTBOOT_BOOT := true
+TW_CUSTOM_POWER_BUTTON := 108
+TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
+BOARD_USE_CUSTOM_RECOVERY_FONT
+TW_BATTERY_SYSFS_WAIT_SECONDS := 1
+
+# Forces TWRP to use CPU info for device ID.
+TW_FORCE_CPUINFO_FOR_DEVICE_ID := true
+
+# to set device display framerate
+TW_FRAMERATE := 120
+
+# issues or to enable advanced features.
+TW_OVERRIDE_SYSTEM_PROPS := \
+"ro.build.product;ro.build.fingerprint=ro.system.build.fingerprint;ro.build.version.incremental;ro.product.device=ro.product.system.device;ro.product.model=ro.product.system.model;ro.product.name=ro.product.system.name"
 
 # enable python
 TW_INCLUDE_PYTHON := true
