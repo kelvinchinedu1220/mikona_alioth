@@ -187,7 +187,7 @@ TW_SUPPORT_INPUT_AIDL_HAPTICS := true
 SHRP_OFFICIAL := true
 SHRP_DEVICE_VERION := Nino_A14
 SHRP_PATH := device/xiaomi/alioth
-SHRP_MAINTAINER := Kelvinchinedu
+SHRP_MAINTAINER := Kelvin_Nino
 SHRP_DEVICE_CODE := alioth
 SHRP_REC_TYPE := Treble
 SHRP_DEVICE_TYPE := A/B
@@ -197,7 +197,7 @@ SHRP_EXTERNAL := /external_sd
 SHRP_INTERNAL := /sdcard
 SHRP_OTG := /usb_otg
 SHRP_FLASH := 1
-SHRP_DARK := true
+SHRP_DARK := false
 SHRP_FLASHLIGHT_PATH := sys/devices/platform/flashlights_ocp8132/torch_brightness
 SHRP_REC := /dev/block/bootdevice/by-name/boot
 SHRP_DEVICE_CODE := alioth
@@ -205,17 +205,8 @@ SHRP_EDL_MODE := 1
 SHRP_CUSTOM_FLASHLIGHT := true
 SHRP_FONP_1 := sys/devices/platform/flashlights_ocp8132/torch_brightness
 SHRP_FONP_2 := sys/devices/platform/flashlights_ocp8132/torch_brightness
-SHRP_STATUSBAR_RIGHT_PADDING := 40
-SHRP_STATUSBAR_LEFT_PADDING := 40
-
-#SHRP Addons
-SHRP_SKIP_DEFAULT_ADDON_1 := true
-SHRP_EXTERNAL_ADDON_PATH := $(DEVICE_PATH)/addons/
-SHRP_EXTERNAL_ADDON_1_NAME := 'Mount Super as RW'
-SHRP_EXTERNAL_ADDON_1_INFO := 'This will mount your system partitions as RW'
-SHRP_EXTERNAL_ADDON_1_FILENAME := mountrw.zip
-SHRP_EXTERNAL_ADDON_1_BTN_TEXT := Mount
-SHRP_EXTERNAL_ADDON_1_SUCCESSFUL_TEXT := Mounted
+SHRP_STATUSBAR_RIGHT_PADDING := 48
+SHRP_STATUSBAR_LEFT_PADDING := 48
 
 # enable python
 TW_INCLUDE_PYTHON := true
