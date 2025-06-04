@@ -67,7 +67,7 @@ VENDOR_CMDLINE += msm_rtb.filter=0x237 service_locator.enable=1 androidboot.usbc
 VENDOR_CMDLINE += androidboot.selinux=permissive androidboot.init_fatal_reboot_target=recovery
 
 # header & cmdline
-ifeq ($(FOX_BOOT_RECOVERY),1)
+ifeq ($(TW_BOOT_RECOVERY),1)
   BOARD_VENDOR_BOOT_HEADER_VERSION := 4
   BOARD_MKBOOTIMG_ARGS += --vendor_cmdline "$(VENDOR_CMDLINE)"
 else
@@ -165,7 +165,7 @@ BOARD_HAS_NO_REAL_SDCARD := true
 RECOVERY_SDCARD_ON_DATA := true
 TARGET_RECOVERY_QCOM_RTC_FIX := true
 TW_EXCLUDE_DEFAULT_USB_INIT := true
-TW_EXTRA_LANGUAGES := true
+TW_EXTRA_LANGUAGES := false
 TW_DEFAULT_LANGUAGE := en
 TW_INCLUDE_NTFS_3G := true
 TW_USE_TOOLBOX := true
@@ -181,15 +181,20 @@ TARGET_USES_MKE2FS := true
 TW_NO_SCREEN_BLANK := true
 TW_EXCLUDE_APEX := true
 TW_SUPPORT_INPUT_AIDL_HAPTICS := true
+TW_DEVICE_VERSION := NINO_3.7_14
 
 # enable python
 TW_INCLUDE_PYTHON := true
+
+# Override system default props
+TW_OVERRIDE_SYSTEM_PROPS := \ 
+"ro.bootimage.build.date.utc=ro.build.date.utc;ro.build.date.utc;ro.odm.build.date.utc=ro.build.date.utc;ro.product.build.date.utc=ro.build.date.utc;ro.system.build.date.utc=ro.build.date.utc;ro.system_ext.build.date.utc=ro.build.date.utc;ro.vendor.build.date.utc=ro.build.date.utc;ro.build.product;ro.build.fingerprint=ro.system.build.fingerprint;ro.build.version.incremental;ro.product.name=ro.product.system.name"
 
 # unified script
 PRODUCT_COPY_FILES += $(DEVICE_PATH)/recovery/$(PRODUCT_RELEASE_NAME)/unified-script.sh:$(TARGET_COPY_OUT_RECOVERY)/root/system/bin/unified-script.sh
 
 # vendor_boot as recovery?
-ifeq ($(FOX_VENDOR_BOOT_RECOVERY),1)
+ifeq ($(TW_VENDOR_BOOT_RECOVERY),true)
   BOARD_USES_RECOVERY_AS_BOOT :=
   BOARD_EXCLUDE_KERNEL_FROM_RECOVERY_IMAGE :=
   BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT := true
@@ -199,9 +204,9 @@ ifeq ($(FOX_VENDOR_BOOT_RECOVERY),1)
       BOARD_INCLUDE_RECOVERY_RAMDISK_IN_VENDOR_BOOT := true
   endif
 
-  ifneq ($(FOX_VENDOR_BOOT_RECOVERY_FULL_REFLASH),1)
+  ifneq ($(TW_VENDOR_BOOT_RECOVERY_FULL_REFLASH),1)
   # disable the reflash menu, until all vendor_boot ROMs have a v4 header - else it won't work
-      OF_NO_REFLASH_CURRENT_ORANGEFOX := 1
+      TW_NO_REFLASH_CURRENT_ORANGEFOX := true
   endif
 endif
 #
