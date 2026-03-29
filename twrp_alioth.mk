@@ -14,7 +14,7 @@ DEVICE_PATH := device/xiaomi/alioth
 $(call inherit-product, $(DEVICE_PATH)/device.mk)
 
 # Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/twrp/config/common.mk)
+$(call inherit-product, vendor/pb/config/common.mk)
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := twrp_$(PRODUCT_RELEASE_NAME)
