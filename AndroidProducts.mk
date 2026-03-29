@@ -6,8 +6,8 @@
 #
 
 PRODUCT_MAKEFILES := \
-	$(LOCAL_DIR)/twrp_alioth.mk
+	$(LOCAL_DIR)/pb_alioth.mk
 
 COMMON_LUNCH_CHOICES := \
-	twrp_alioth-eng
+	pb_alioth-eng
 #
